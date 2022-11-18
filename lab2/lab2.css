@@ -1,0 +1,44 @@
+.square {
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 15%;
+}
+
+.square1 {
+    background-color: yellow;
+    position: absolute;
+    left: 100px;
+    top: 390px;
+    transform: rotate(15deg);
+}
+
+.square2 {
+    background-color: lightblue;
+    position: absolute;
+    left: 145px;
+    top: 318px;
+    transform: rotate(45deg);
+}
+
+.square3 {
+    background-color: lightpink;
+    position: absolute;
+    left: 192px;
+    top: 385px;
+    transform: rotate(70deg);
+}
+
+.square1Transform {
+    transform: translate(400px, 190px) rotate(15deg);
+    background-color: yellow;
+}
+.square2Transform {
+    transform: translate(445px, 45px) rotate(45deg);
+    background-color: lightblue;
+}
+
+.square3Transform {
+    transform: translate(490px, 45px) rotate(70deg);
+    background-color: lightpink;
+}
