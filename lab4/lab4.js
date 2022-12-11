@@ -24,6 +24,7 @@ secondP.addEventListener("click", () => {
   changeColor(secondP, createRandomColor(), createRandomColor());
 });
 
+//TASK2
 
 const addImg = document.getElementById("addImg");
 const plusImg = document.getElementById("plusScale");
@@ -41,55 +42,52 @@ addImg.addEventListener("click", () => {
 
 deleteImg.addEventListener("click", () => {
   let img = document.getElementById("addedImg");
-  if(typeof img !== 'undefined' && img !== null) {
+  if (typeof img !== "undefined" && img !== null) {
     img.remove();
+  } else {
+    alert("Can't delete former img");
   }
-  else{alert("Can't delete former img")}
 });
 
-
 plusImg.addEventListener("click", () => {
-  func1("addedImg")
+  func1("addedImg");
 });
 
 minusImg.addEventListener("click", () => {
-  func2("addedImg")
+  func2("addedImg");
 });
 
-const func1 = (imgId,sign) => {
-  let img = document.getElementById(imgId)
-  if(typeof img !== 'undefined' && img !== null){
+const func1 = (imgId, sign) => {
+  let img = document.getElementById(imgId);
+  if (typeof img !== "undefined" && img !== null) {
     let currHeight = img.clientHeight;
     if (currHeight > 550) alert("Too big already");
     else {
-   img.style.height = currHeight + 15 + "px";
-  }
-  }
-  else{
+      img.style.height = currHeight + 15 + "px";
+    }
+  } else {
     let picture = document.getElementById("Picture");
     let currHeight = picture.clientHeight;
     if (currHeight > 550) alert("Too big already");
     else {
-    picture.style.height = currHeight + 15 + "px";
+      picture.style.height = currHeight + 15 + "px";
+    }
   }
-  }
-}
+};
 const func2 = (imgId) => {
-  let img = document.getElementById(imgId)
-  if(typeof img !== 'undefined' && img !== null){
+  let img = document.getElementById(imgId);
+  if (typeof img !== "undefined" && img !== null) {
     let currHeight = img.clientHeight;
-    if (currHeight <400) alert("Too big already");
+    if (currHeight < 400) alert("Too big already");
     else {
-   img.style.height = currHeight - 15 + "px";
-  }
-  }
-  else{
+      img.style.height = currHeight - 15 + "px";
+    }
+  } else {
     let picture = document.getElementById("Picture");
     let currHeight = picture.clientHeight;
-    if (currHeight <400) alert("Too big already");
+    if (currHeight < 400) alert("Too big already");
     else {
-    picture.style.height = currHeight - 15 + "px";
+      picture.style.height = currHeight - 15 + "px";
+    }
   }
-  }
-}
-
+};
