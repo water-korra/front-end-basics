@@ -1,0 +1,50 @@
+.container {
+    text-align: center;
+    font-size: 30pt;
+    width: 950px;
+    height: 850px;
+}
+
+.img1 {
+    background-color: #72f654;
+    height: 150px;
+}
+
+.clear {
+    clear: both;
+}
+.text1 {
+    background-color: #9191fb;
+    height: 540px;
+    width: 25%;
+    float: left;
+}
+
+.img2 {
+    background-color: #ade4f6;
+    height: 540px;
+    width: 75%;
+    float: right;
+}
+
+.text2 {
+    background-color: lightyellow;
+    height: 125px;
+}
+
+.img1 > h2 {
+    padding-top: 5%;
+}
+
+.text1 > h2 {
+    padding-top: 80%;
+}
+
+.text2 > h2 {
+    margin-top: 0%;
+    padding: 5% 0%;
+}
+
+.img2 > h2 {
+    padding-top: 27%;
+}
