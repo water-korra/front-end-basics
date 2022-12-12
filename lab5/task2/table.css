@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20vh auto 0 auto;
+}
+
+.colorPalette {
+    width: 300px;
+    margin: auto;
+}
+
+.table,
+td {
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+table {
+    margin: auto;
+    margin-top: 50px;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: monospace;
+    text-align: center;
+}
