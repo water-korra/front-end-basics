@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Form Validation</title>
+        <link rel="stylesheet" href="lab5.css" />
+        <script defer src="form.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <form id="form" action="/" method="dialog" autocomplete="on">
+                <h1>Fill the form</h1>
+                <div class="input-control">
+                    <label for="username">ПІБ</label>
+                    <input id="username" name="username" type="text" />
+                </div>
+                <div class="input-control">
+                    <label for="phone">Телефон</label>
+                    <input id="phone" name="phone" type="text" />
+                </div>
+                <div class="input-control">
+                    <label for="IdCard">ID-card</label>
+                    <input id="IdCard" name="IdCard" type="text" />
+                </div>
+                <div class="input-control">
+                    <label for="faculty">Факультет</label>
+                    <input id="faculty" name="faculty" type="text" />
+                </div>
+                <div class="input-control">
+                    <label for="BirthDate">Дата народження</label>
+                    <input id="BirthDate" name="BirthDate" type="text" />
+                </div>
+                <button id="submit">submit</button>
+            </form>
+            <div id="output" class="output">
+                <h2>Your data</h2>
+            </div>
+        </div>
+    </body>
+</html>
