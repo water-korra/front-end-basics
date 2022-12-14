@@ -1,26 +1,25 @@
 'use strict'
 
-async function getInfoAboutPerson() {
-    const response = await fetch('https://randomuser.me/api/');
-    const { results: [person] } = await response.json();
-    const personData = 
-    {
-        imageLink: person.picture.large,
-        city: person.location.city,
-        country: person.location.country,
-        postcode: person.location.postcode,
-        email: person.email
-    }
+const button = document.querySelector('button')
+button.addEventListener('click', () => {
+    getUserData()
+})
 
-    return personData
-};
+const getUserData = () => {
+    fetch('https://randomuser.me/api')
+        .then((response) => response.json() )
+        .then((data) => showUser(data))
+}
 
-
-document.querySelector('button').addEventListener('click', async (event) => {
-    const { imageLink, city, country, postcode, email} = await getInfoAboutPerson();
-    const personCard = document.createElement('div');
-    personCard.classList.add('personCard');
-
+const showUser = data => {
+    const person = data['results'][0]
+    const imageLink = person['picture']['large']
+    const city = person['location']['city']
+    const country = person['location']['country']
+    const postcode = person['location']['postcode']
+    const email = person['email']
+    const personCard = document.createElement('div')
+    personCard.classList.add('personCard')
     personCard.innerHTML = `
         <img class="personCardImg" src="${imageLink}" >
         <div class="personCardInfo">City:&nbsp;<span>${city}</span></div>
@@ -30,4 +29,5 @@ document.querySelector('button').addEventListener('click', async (event) => {
         &nbsp;<span>${email}</span></div>
     `
     document.querySelector('.container').append(personCard);
-}); 
+}
+
